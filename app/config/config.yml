@@ -110,8 +110,6 @@ light_saml_symfony_bridge:
     party:
         idp:
             files:
-                - "%kernel.root_dir%/../vendor/lightsaml/lightsaml/web/sp/openidp.feide.no.xml"
-                - "%kernel.root_dir%/../vendor/lightsaml/lightsaml/web/sp/testshib-providers.xml"
                 - "%kernel.root_dir%/../web/sp/GoogleIDPMetadata-ditzthedaisy.com.xml"
     store:
         id_state: id_store  # name of id store service created in step 6
