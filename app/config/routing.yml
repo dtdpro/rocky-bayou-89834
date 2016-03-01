@@ -25,3 +25,10 @@ homepage:
         _controller: FrameworkBundle:Template:template
         template:    default/homepage.html.twig
         _locale:     %locale%
+
+lightsaml_sp:
+    resource: "@LightSamlSpBundle/Resources/config/routing.yml"
+    prefix: saml
+
+logout:
+    path: /logout
