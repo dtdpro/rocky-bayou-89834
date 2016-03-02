@@ -16,7 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use AppBundle\Entity\User;
+use AppBundle\Entity\SAMLUser;
 
 /**
  * Controller used to manage blog contents in the backend.
@@ -32,7 +32,7 @@ use AppBundle\Entity\User;
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  */
-class UserController extends Controller
+class SAMLUserController extends Controller
 {
     /**
      * Lists all User entities.
