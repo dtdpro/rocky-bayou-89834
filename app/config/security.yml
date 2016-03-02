@@ -26,7 +26,7 @@ security:
         secured_area:
             # this firewall applies to all URLs
             provider: database_users       # user provider name configured in step 9
-            pattern: ^/admin
+            pattern: ^/
 
             # but the firewall does not require login on every page
             # denying access is done in access_control or in your controllers
