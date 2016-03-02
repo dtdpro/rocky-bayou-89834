@@ -25,7 +25,8 @@ security:
     firewalls:
         secured_area:
             # this firewall applies to all URLs
-            pattern: ^/
+            provider: database_users       # user provider name configured in step 9
+            pattern: ^/admin
 
             # but the firewall does not require login on every page
             # denying access is done in access_control or in your controllers
@@ -48,12 +49,13 @@ security:
                 path: security_logout
                 # The name of the route to redirect to after logging out
                 target: homepage
-
+        blog_area:
+            pattern: ^/blog
             light_saml_sp:
                 provider: db_provider       # user provider name configured in step 9
                 user_creator: user_creator  # name of the user creator service created in step 10
-                #login_path: /saml/login
-                #check_path: /saml/login_check
+                login_path: /saml/login
+                check_path: /saml/login_check
 
     access_control:
         # this is a catch-all for the admin area
