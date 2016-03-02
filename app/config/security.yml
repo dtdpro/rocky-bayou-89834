@@ -52,8 +52,8 @@ security:
             light_saml_sp:
                 provider: db_provider       # user provider name configured in step 9
                 user_creator: user_creator  # name of the user creator service created in step 10
-                login_path: /saml/login
-                check_path: /saml/login_check
+                #login_path: /saml/login
+                #check_path: /saml/login_check
 
     access_control:
         # this is a catch-all for the admin area
