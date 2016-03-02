@@ -1,0 +1,37 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block body_id 'admin_user_index' %}
+
+{% block main %}
+    <h1>Users</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th><i class="fa fa-user"></i>Username</th>
+                <th><i class="fa fa-cogs"></i> Roles</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for u in users %}
+            <tr>
+                <td>{{ u.id }}</td>
+                <td>{{ u.username }}</td>
+                <td>{% for r in u.roles %}{{ r|trans }}<br>{% endfor %}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" align="center">No Users Found</td>
+           </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block sidebar %}
+
+    {{ parent() }}
+
+    {{ show_source_code(_self) }}
+{% endblock %}
