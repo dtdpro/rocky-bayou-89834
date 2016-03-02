@@ -50,7 +50,7 @@ security:
                 # The name of the route to redirect to after logging out
                 target: homepage
         blog_area:
-            pattern: ^/blog
+            pattern: ^/
             light_saml_sp:
                 provider: db_provider       # user provider name configured in step 9
                 user_creator: user_creator  # name of the user creator service created in step 10
