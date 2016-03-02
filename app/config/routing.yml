@@ -8,7 +8,7 @@
 lightsaml_sp:
     resource: "@LightSamlSpBundle/Resources/config/routing.yml"
     prefix: saml
-    
+
 app:
     resource: '@AppBundle/Controller/'
     type:     annotation
