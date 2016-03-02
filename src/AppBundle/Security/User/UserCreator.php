@@ -37,11 +37,9 @@ class UserCreator implements UserCreatorInterface
 		$username = $this->usernameMapper->getUsername($response);
 
 		$user = new User();
-		$user
-			->setUsername($username)
-			->setEmail($username)
-			->setRoles(['ROLE_USER'])
-		;
+		$user->setUsername($username);
+		$user->setEmail($username);
+		$user->setRoles(['ROLE_USER']);
 
 		$this->objectManager->persist($user);
 		$this->objectManager->flush();
