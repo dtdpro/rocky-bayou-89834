@@ -40,6 +40,7 @@ class UserCreator implements UserCreatorInterface
 		$user->setUsername($username);
 		$user->setEmail($username);
 		$user->setRoles(['ROLE_USER']);
+		$user->setPassword('none');
 
 		$this->objectManager->persist($user);
 		$this->objectManager->flush();
