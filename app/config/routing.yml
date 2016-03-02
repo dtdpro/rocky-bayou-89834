@@ -4,6 +4,11 @@
 # If you don't like to add annotations in your applications, you can also define
 # the routes in YAML, XML or PHP files.
 # See http://symfony.com/doc/current/book/routing.html
+
+lightsaml_sp:
+    resource: "@LightSamlSpBundle/Resources/config/routing.yml"
+    prefix: saml
+    
 app:
     resource: '@AppBundle/Controller/'
     type:     annotation
@@ -25,10 +30,6 @@ homepage:
         _controller: FrameworkBundle:Template:template
         template:    default/homepage.html.twig
         _locale:     %locale%
-
-lightsaml_sp:
-    resource: "@LightSamlSpBundle/Resources/config/routing.yml"
-    prefix: saml
 
 logout:
     path: /logout
