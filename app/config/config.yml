@@ -101,7 +101,7 @@ knp_paginator:
 
 light_saml_symfony_bridge:
     own:
-        entity_id: DtDDevLogin
+        entity_id: https://rocky-bayou-89834.herokuapp.com
         credentials:
             -
                 certificate: "%kernel.root_dir%/../vendor/lightsaml/lightsaml/web/sp/saml.crt"
