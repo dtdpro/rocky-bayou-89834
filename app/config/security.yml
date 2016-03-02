@@ -18,7 +18,7 @@ security:
 
         db_provider:
             entity:
-                class: AppBundle:SAMLUser
+                class: AppBundle:User
                 property: username
 
     # http://symfony.com/doc/current/book/security.html#firewalls-authentication

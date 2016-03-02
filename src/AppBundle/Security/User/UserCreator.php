@@ -2,7 +2,7 @@
 // src/AppBundle/Security/User/UserCreator.php
 namespace AppBundle\Security\User;
 
-use AppBundle\Entity\SAMLUser;
+use AppBundle\Entity\User;
 use Doctrine\Common\Persistence\ObjectManager;
 use LightSaml\Model\Protocol\Response;
 use LightSaml\SpBundle\Security\User\UserCreatorInterface;
@@ -36,9 +36,10 @@ class UserCreator implements UserCreatorInterface
 	{
 		$username = $this->usernameMapper->getUsername($response);
 
-		$user = new SAMLUser();
+		$user = new User();
 		$user
 			->setUsername($username)
+			->setEmail($username)
 			->setRoles(['ROLE_USER'])
 		;
 
